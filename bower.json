@@ -1,0 +1,17 @@
+{
+  "name": "Angular_Google_Maps",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tulionline/Angular_Google_Maps",
+  "authors": [
+    "Túlio Filho <tulio@analiselogica.com.br>"
+  ],
+  "description": "Projeto Angular utilizando Google Maps",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
