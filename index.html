@@ -1,0 +1,36 @@
+<html ng-app="angularGoogleMaps">
+
+	<header>
+		<style>
+			.angular-google-map-container { height: 600px; }
+		</style>
+		
+		<script src='lib/lodash/lodash.min.js'></script>
+		<script src='lib/angular/angular.min.js'></script>
+		<script src='lib/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
+		<script src='lib/angular-google-maps/dist/angular-google-maps.min.js'></script>
+		
+		<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+		
+		<script>
+			var casa;
+			
+			casa = {
+			latitude: -3.734516,
+			longitude: -38.597402
+			};
+			angular.module('angularGoogleMaps', ['uiGmapgoogle-maps']);
+			
+			angular.module('angularGoogleMaps').controller("mainController", function($scope){
+				//$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+				$scope.map = { center: casa, zoom: 18 };
+			});
+		</script>
+	</header>
+	
+	<body ng-controller="mainController">
+		{{$scope.map}}
+		<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+	</body>
+
+</html>
